@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard Riddle</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+        
+        h1, h2 {
+            font-weight: normal;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+        }
+        
+        main {
+            padding: 2rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hard Riddle</h1>
+    </header>
+    <main>
+        <p>I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?</p>
+        <input type="text" id="answer" placeholder="Enter your answer...">
+        <button onclick="checkAnswer()">Submit</button>
+    </main>
+    <div id="congrats" class="hidden">
+        <h2>Congratulations!</h2>
+        <p>You solved the hard riddle!</p>
+        <p>Here is your private message:</p>
+        <div id="rickRollVideoContainer" class="hidden">
+            <button onclick="playRickRollVideo()">Play the Video</button>
+        </div>
+    </div>
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "pencil lead") {
+                document.getElementById("congrats").classList.remove("hidden");
+                document.getElementById("congrats").classList.add("visible");
+                document.getElementById("rickRollVideoContainer").classList.remove("hidden");
+                document.getElementById("rickRollVideoContainer").classList.add("visible");
+            }
+        }
+
+        function playRickRollVideo() {
+            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+        }
+    </script>
+</body>
+</html>
